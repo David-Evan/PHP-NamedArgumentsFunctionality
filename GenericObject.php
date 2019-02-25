@@ -6,6 +6,7 @@
  *
  * This tiny class is an very usefull shortcut to provide named arguments functionnality to any PHP object. 
  * You just have to extend your object with this GenericObject
+ * Arguments is case-unsensitive.
  */
 abstract class GenericObject{
 
