@@ -9,6 +9,14 @@
  */
 abstract class GenericObject{
 
+    /**
+     * You can overload this method. By default, you can use constructor to set named parameters
+     * @param array $params - Array of parameters with : ['ParamName' => 'ParamValue'];
+     */
+    public function __construct(array $params = []) {
+        $this->setParameters($params);
+    }
+
    /**
      * Use an associative array to set all parameters of the object.
      * @param array $params - Array of parameters with : ['ParamName' => 'ParamValue']
