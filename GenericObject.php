@@ -21,15 +21,25 @@ abstract class GenericObject{
    /**
      * Use an associative array to set all parameters of the object.
      * @param array $params - Array of parameters with : ['ParamName' => 'ParamValue']
-     * @return void
+     * @return bool - true if array can be loaded;
      */
-    public function setParameters(array $params = []) : void {
+    public function setParameters(array $params = []) : bool {
         if(empty($params))
-            return;
+            return false;
 
         foreach($params as $paramName => $paramValue){
             $method = 'set'.ucfirst($paramName);
             $this->{$method}($paramValue);
         }
+        return true;
+    }
+
+    /**
+     * Same as "setParameters" but use JSON data instead of an array
+     * @param json $JSONParams
+     * @return bool - true if json data can be loaded
+     */
+    public function setJSONParameters(string $JSONParams) : bool {
+        return setParameters(json_decode($JSONParams, true));
     }
 }
