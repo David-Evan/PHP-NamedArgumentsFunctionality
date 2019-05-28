@@ -1,11 +1,13 @@
 <?php
-require('GenericObject.php');
+require('NamedArguments.php');
 
 /**
- * Cars has just to extends GenericObject to provide named argument functionnality.
+ * Cars has just to use NamedArguments to provide named arguments functionnality.
  * Arguments are case-unsensitive.
  */
-class Cars extends GenericObject{
+class Cars{
+
+    use NamedArguments;
     private $model, 
             $name, 
             $color;

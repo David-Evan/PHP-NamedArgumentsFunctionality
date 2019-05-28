@@ -8,7 +8,7 @@
  * You just have to extend your object with this GenericObject
  * Arguments is case-unsensitive.
  */
-abstract class GenericObject{
+trait NamedArguments{
 
     /**
      * You can overload this method. By default, you can use constructor to set named parameters
@@ -36,10 +36,11 @@ abstract class GenericObject{
 
     /**
      * Same as "setParameters" but use JSON data instead of an array
-     * @param json $JSONParams
+     * @param string $JSONParams
      * @return bool - true if json data can be loaded
      */
     public function setJSONParameters(string $JSONParams) : bool {
         return setParameters(json_decode($JSONParams, true));
     }
+
 }
