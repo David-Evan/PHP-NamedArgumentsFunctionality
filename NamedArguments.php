@@ -4,8 +4,8 @@
  * @source http://github.com/David-Evan/PHP-NamedArgumentsFunctionnality
  * @copyright LICENCE M.I.T
  *
- * This tiny class is an very usefull shortcut to provide named arguments functionnality to any PHP object. 
- * You just have to extend your object with this GenericObject
+ * This tiny trait is an very usefull shortcut to provide named arguments functionnality to any PHP object. 
+ * You just have to extend your object with this Trait
  * Arguments is case-unsensitive.
  */
 trait NamedArguments{
