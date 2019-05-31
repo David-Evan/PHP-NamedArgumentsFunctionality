@@ -1,5 +1,7 @@
 <?php
-require('NamedArguments.php');
+require_once('vendor/autoload.php');
+
+use App\Traits\NamedArguments;
 
 /**
  * Cars has just to use NamedArguments to provide named arguments functionnality.

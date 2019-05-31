@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Traits;
+
 /**
  * @author David EVAN
  * @source http://github.com/David-Evan/PHP-NamedArgumentsFunctionnality
@@ -9,6 +12,12 @@
  * Arguments is case-unsensitive.
  */
 trait NamedArguments{
+
+    /**
+     * @tooltips : Use NamedArgument without manually implements all seyXyz Methods.
+     * use AutoSetter;
+     */
+    use AutoSetter;
 
     /**
      * You can overload this method. By default, you can use constructor to set named parameters

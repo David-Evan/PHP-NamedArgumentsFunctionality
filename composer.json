@@ -1,0 +1,17 @@
+{
+    "name": "den/php-named-arguments-functionality",
+    "description": "This tiny trait is an very usefull shortcut to provide named arguments functionnality to any PHP object.",
+    "type": "library",
+    "license": "M.I.T",
+    "authors": [
+        {
+            "name": "David Evan",
+            "email": "devan.exa@gmail.com"
+        }
+    ],
+    "require": {},
+
+    "autoload": {
+        "psr-4": {"App\\": "src/"}
+    }
+}
